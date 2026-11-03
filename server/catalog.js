@@ -1,0 +1,222 @@
+// Catalogue de démonstration. Les montants sont des entiers en centimes de MAD.
+export const shop = Object.freeze({
+  currency: 'MAD',
+  shippingCents: 2900,
+  freeShippingThresholdCents: 50000,
+});
+
+export const categories = [
+  {
+    id: 'maison',
+    name: 'Une maison qui fait du bien',
+    shortName: 'Maison',
+    icon: 'home',
+    image: '/images/vase-aube-1.svg',
+    count: 3,
+  },
+  {
+    id: 'lifestyle',
+    name: 'Les petits rituels',
+    shortName: 'Lifestyle',
+    icon: 'sun',
+    image: '/images/mug-nuage-1.svg',
+    count: 2,
+  },
+  {
+    id: 'accessoires',
+    name: 'Toujours à vos côtés',
+    shortName: 'Accessoires',
+    icon: 'bag',
+    image: '/images/pochette-douce-1.svg',
+    count: 3,
+  },
+];
+
+const definitions = [
+  {
+    id: 'gourde-nomade',
+    name: 'La gourde Nomade',
+    subtitle: 'Votre pause fraîcheur, partout.',
+    category: 'lifestyle',
+    utility: 'emporter',
+    priceCents: 18900,
+    stock: 18,
+    isNew: true,
+    featured: 1,
+    createdAt: '2026-10-29',
+    color: 'Rose poudré',
+    badge: 'Le coup de cœur',
+    description:
+      'Une silhouette toute douce à glisser dans votre sac. Nomade garde vos boissons à portée de main, du bureau aux petites escapades.',
+    benefits: [
+      'Format 500 ml facile à emporter',
+      'Bouchon à vis et anse de transport',
+      'Acier inoxydable, réutilisable au quotidien',
+    ],
+    details: '500 ml · 24 × 7 cm · Acier inoxydable · Lavage à la main',
+  },
+  {
+    id: 'vase-aube',
+    name: 'Le vase Aube',
+    subtitle: 'Un peu de poésie à la maison.',
+    category: 'maison',
+    utility: 'ralentir',
+    priceCents: 24900,
+    stock: 9,
+    isNew: false,
+    featured: 2,
+    createdAt: '2026-09-14',
+    color: 'Terracotta rosé',
+    badge: 'Notre sélection',
+    description:
+      'Avec ses lignes sculpturales et son fini mat, Aube trouve sa place sur une étagère, une table ou votre coin préféré. Beau avec quelques tiges, tout aussi beau seul.',
+    benefits: [
+      'Une forme qui habille un petit espace',
+      'Céramique au toucher mat',
+      'Pour fleurs séchées ou décoration seule',
+    ],
+    details: '22 × 14 cm · Céramique · Nettoyage avec un chiffon doux',
+  },
+  {
+    id: 'pochette-douce',
+    name: 'La pochette Douce',
+    subtitle: 'L’essentiel reste bien rangé.',
+    category: 'accessoires',
+    utility: 'organiser',
+    priceCents: 12900,
+    stock: 24,
+    isNew: true,
+    featured: 3,
+    createdAt: '2026-11-01',
+    color: 'Rose thé',
+    badge: 'Nouveau',
+    description:
+      'Câbles, petits soins, clés et trésors du quotidien : chacun trouve sa place dans cette pochette matelassée. Changez de sac sans rien oublier.',
+    benefits: [
+      'Ouverture zippée facile à utiliser',
+      'Format compact à glisser dans un sac',
+      'Tissu matelassé et doublure intérieure',
+    ],
+    details: '21 × 14 × 7 cm · Coton et polyester · Lavage doux à la main',
+  },
+  {
+    id: 'mug-nuage',
+    name: 'Le mug Nuage',
+    subtitle: 'Les matins méritent de la douceur.',
+    category: 'lifestyle',
+    utility: 'ralentir',
+    priceCents: 9900,
+    stock: 32,
+    isNew: false,
+    featured: 4,
+    createdAt: '2026-09-20',
+    color: 'Crème vanille',
+    badge: '',
+    description:
+      'Un café, un thé, quelques minutes pour soi. Avec son anse généreuse et ses courbes rondes, Nuage accompagne les pauses que l’on aime prolonger.',
+    benefits: [
+      'Contenance 300 ml pour votre rituel préféré',
+      'Anse large agréable à tenir',
+      'Grès émaillé, finition brillante',
+    ],
+    details: '300 ml · 9 × 8 cm · Grès émaillé · Compatible lave-vaisselle',
+  },
+  {
+    id: 'lampe-luna',
+    name: 'La lampe Luna',
+    subtitle: 'Une lumière pour ralentir.',
+    category: 'maison',
+    utility: 'ralentir',
+    priceCents: 34900,
+    stock: 7,
+    isNew: true,
+    featured: 5,
+    createdAt: '2026-10-27',
+    color: 'Blush',
+    badge: 'Nouveau',
+    description:
+      'Luna transforme un coin lecture en petit cocon. Son dôme arrondi diffuse une lumière douce pour les fins de journée à la maison.',
+    benefits: [
+      'Éclairage LED d’ambiance',
+      'Petit format pour table ou chevet',
+      'Alimentation USB-C, câble inclus',
+    ],
+    details:
+      '26 × 18 cm · ABS · LED 3 W · Alimentation 5 V USB, adaptateur non inclus',
+  },
+  {
+    id: 'tote-escale',
+    name: 'Le tote Escale',
+    subtitle: 'Les mains libres, l’esprit aussi.',
+    category: 'accessoires',
+    utility: 'emporter',
+    priceCents: 14900,
+    stock: 16,
+    isNew: false,
+    featured: 6,
+    createdAt: '2026-09-06',
+    color: 'Écru naturel',
+    badge: '',
+    description:
+      'Pour le marché du samedi, un livre en plus ou une journée qui s’improvise. Un cabas souple et généreux qui vous suit simplement.',
+    benefits: [
+      'Grand compartiment pour les essentiels',
+      'Anses longues pour un porté épaule',
+      'Toile de coton épaisse et pliable',
+    ],
+    details: '38 × 35 × 10 cm · Toile de coton · Lavage à 30 °C',
+  },
+  {
+    id: 'lunchbox-pause',
+    name: 'La lunchbox Pause',
+    subtitle: 'Le déjeuner vous suit.',
+    category: 'accessoires',
+    utility: 'emporter',
+    priceCents: 17900,
+    stock: 14,
+    isNew: true,
+    featured: 7,
+    createdAt: '2026-10-30',
+    color: 'Sauge',
+    badge: 'Nouveau',
+    description:
+      'Préparez votre repas et emportez-le sans compliquer votre matinée. Un contenant compact, des compartiments pratiques et un élastique pour tout garder ensemble.',
+    benefits: [
+      'Deux compartiments pour varier les repas',
+      'Élastique de maintien inclus',
+      'Format 900 ml facile à ranger',
+    ],
+    details:
+      '900 ml · 18 × 12 × 9 cm · Polypropylène · Retirer le couvercle avant réchauffage',
+  },
+  {
+    id: 'organiseur-accord',
+    name: 'L’organiseur Accord',
+    subtitle: 'Une place pour chaque petite chose.',
+    category: 'maison',
+    utility: 'organiser',
+    priceCents: 15900,
+    stock: 0,
+    isNew: false,
+    featured: 8,
+    createdAt: '2026-08-23',
+    color: 'Sable',
+    badge: '',
+    description:
+      'Sur le bureau ou près de l’entrée, Accord rassemble les objets que l’on cherche toujours. Une petite habitude qui libère de la place dans la tête.',
+    benefits: [
+      'Trois espaces de rangement',
+      'Lignes arrondies faciles à nettoyer',
+      'Compact sur un bureau ou une console',
+    ],
+    details: '23 × 12 × 8 cm · ABS · Nettoyage avec un chiffon humide',
+  },
+];
+
+export const products = definitions.map((product) => ({
+  ...product,
+  images: [1, 2, 3].map((view) => `/images/${product.id}-${view}.svg`),
+}));
+export const productsById = new Map(
+  products.map((product) => [product.id, product]),
+);
